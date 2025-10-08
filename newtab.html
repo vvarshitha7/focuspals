@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Focus Buddy Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1 class="dashboard-header">Focus Buddy Dashboard</h1>
+    <div class="dashboard-grid">
+      <!-- To-Do List Card -->
+      <section class="card todo-card">
+        <div class="card-title"><span>📝</span>To-Do List</div>
+        <div class="todo-input-row">
+          <input type="text" id="todo-input" placeholder="Add a new task..." />
+          <button id="add-todo" class="circle-btn">+</button>
+        </div>
+        <ul id="todo-list"></ul>
+        <div class="todo-progress-summary"></div>
+      </section>
+
+      <!-- Quote Card -->
+      <section class="card quote-card">
+        <div class="card-title"><span>💬</span>Daily Inspiration</div>
+        <blockquote id="quote-text"></blockquote>
+        <div class="subtext"><span id="quote-footer"></span></div>
+      </section>
+
+      <!-- Weather Card -->
+      <section class="card weather-card">
+        <div class="card-title"><span>☁️</span>Weather</div>
+        <div class="weather-main">
+          <div id="weather-icon"></div>
+          <div id="weather-temp">--°F</div>
+          <div id="weather-desc">Loading...</div>
+        </div>
+        <div class="weather-grid">
+          <div class="weather-box">
+            <span class="weather-label">Humidity</span>
+            <span id="weather-humidity">--%</span>
+          </div>
+          <div class="weather-box">
+            <span class="weather-label">Wind</span>
+            <span id="weather-wind">-- mph</span>
+          </div>
+        </div>
+        <div class="subtext" id="weather-footer"></div>
+      </section>
+
+      <!-- Pet Card -->
+      <section class="card pet-card">
+        <div class="card-title"><span>🤍</span>Study Buddy</div>
+        <div class="pet-emoji" id="pet-emoji">🐱</div>
+        <div class="pet-name">Whiskers</div>
+        <div class="pet-progress-row">
+          <span class="pet-label">Happiness</span>
+          <span id="pet-happiness-value">75%</span>
+        </div>
+        <div id="pet-happiness-bar" class="progress-bar">
+          <div id="pet-happiness-inner" class="progress-bar-inner"></div>
+        </div>
+        <div id="pet-status" class="subtext"></div>
+        <div class="pet-action-row">
+          <button id="btn-pet" class="pet-btn">Pet 🤗</button>
+          <button id="btn-feed" class="pet-btn pet-feed">Feed 🍖</button>
+        </div>
+      </section>
+
+      <!-- Analytics Card -->
+      <section class="card analytics-card">
+        <div class="card-title"><span>⏱️</span>Today's Focus Analytics</div>
+        <div class="analytics-row">
+          <div class="analytics-box focused">
+            <div class="analytics-icon">🟢</div>
+            <div class="analytics-label">Focused Time</div>
+            <div class="analytics-value" id="focus-time">245</div>
+            <div class="analytics-unit">minutes</div>
+          </div>
+          <div class="analytics-box distracted">
+            <div class="analytics-icon">🔴</div>
+            <div class="analytics-label">Distracted Time</div>
+            <div class="analytics-value" id="distract-time">85</div>
+            <div class="analytics-unit">minutes</div>
+          </div>
+        </div>
+        <div class="focus-score-group">
+          <div class="focus-score-row">
+            <span>Focus Score</span>
+            <span id="focus-score-value">74%</span>
+          </div>
+          <div class="progress-bar wide" id="focusbar-group">
+            <div id="focus-bar" class="progress-bar-inner"></div>
+            <div id="distract-bar" class="progress-bar-inner"></div>
+          </div>
+          <div class="focus-score-details">
+            <span>🎯 Great job staying focused!</span>
+            <span>Total: <span id="total-minutes"></span> min</span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <hr/>
+      <div class="footer-brand">FocusPals</div>
+    </footer>
+  </div>
+  <script src="newtab.js"></script>
+</body>
+</html>
